@@ -6,6 +6,7 @@ import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -115,6 +116,8 @@ public final class PowerConverterCore {
     @EventHandler
     public void init(FMLInitializationEvent evt) throws Exception {
         PowerSystemManager.getInstance().registerBlocks();
+
+        FMLInterModComms.sendMessage("Waila", "register", "powercrystals.powerconverters.mods.waila.WailaProvider.register");
     }
 
     @SuppressWarnings("UnusedDeclaration")
