@@ -154,7 +154,7 @@ public abstract class BaseGTProducerTileEntity<T> extends TileEntityEnergyProduc
     @Override
     public final boolean getAir(int aX, int aY, int aZ) {
     	if (ignoreUnloadedChunks && crossedChunkBorder(aX, aZ) && !worldObj.blockExists(aX, aY, aZ)) return true;
-    	return GT_Utility.isAirBlock(worldObj, aX, aY, aZ);
+    	return GT_Utility.isBlockAir(worldObj, aX, aY, aZ);
     }
     
     @Override
