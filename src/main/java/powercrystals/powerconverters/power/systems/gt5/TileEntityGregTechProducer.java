@@ -57,14 +57,14 @@ public class TileEntityGregTechProducer extends BaseGTProducerTileEntity<IEnergy
     }   
     
     /** 
-     * Incrases the maxAmperage by one Step overflow will be catched (>8 == 1)
+     * Incrases the maxAmperage by one Step overflow will be catched (>16 == 1)
      * 
      * @return long the new maxAmperage
      */
     public long incMaxAmperage(){
 		long tmp = (maxAmperage + 1);
 		
-		if(tmp > 8)
+		if(tmp > 16)
 			tmp = 1;
 		
 		maxAmperage = tmp;
