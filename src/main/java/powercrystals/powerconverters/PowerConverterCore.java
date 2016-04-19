@@ -255,7 +255,7 @@ public final class PowerConverterCore {
         dir = new File(new File(dir, modId.toLowerCase()), "common.cfg");
         Configuration c = new Configuration(dir);
 
-        bridgeBufferSize = c.get(Configuration.CATEGORY_GENERAL, "bridgeBufferSize", 160000000).getInt();
+        bridgeBufferSize = c.get(Configuration.CATEGORY_GENERAL, "bridgeBufferSize", 2000000000).getInt();
         for(RecipeProvider provider : enabledRecipes) {
             provider.loadConfig(c);
         }
