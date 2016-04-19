@@ -23,12 +23,12 @@ repositories {
 	}
 	maven {
 		name = "calclavia"
-		url = "http://calclavia.com/maven/"
+		url = "http://localhost/maven/"
 	}
 
     maven{
         name "Waila Mobius Repo"
-        url "http://mobiusstrip.eu/maven"
+        url "http://localhost/maven/"
     }
 
     maven{
